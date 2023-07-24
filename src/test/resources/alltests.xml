@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="All tests" >
+<!--    <listeners><listener class-name="listeners.PersonTestListener"></listener></listeners>-->
+
+
+    <test name="Tests smoke">
+
+        <classes>
+            <class name="ui.tests.LoginTests"/>
+
+            <class name="ui.tests.ProjectTest"/>
+
+            <class name="ui.tests.TaskTest"/>
+
+            <class name="ui.tests.CommentTest"/>
+
+
+        </classes>
+
+    </test>
+</suite>

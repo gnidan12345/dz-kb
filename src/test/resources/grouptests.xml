@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="UserDataTests" >
+
+
+<!--        //run group -->
+    <groups>
+        <run>
+            <include name="UserDataTests"/>
+        </run>
+    </groups>
+
+    <test name="UserDataTests">
+
+        <classes>
+            <class name="ui.tests.LoginTests"/>
+
+        </classes>
+
+    </test>
+
+
+<!--    <test name="Woman Parameters  smoke">-->
+<!--        <classes>-->
+<!--            <class name="perosntest.WomanTests"/>-->
+<!--        </classes>-->
+
+
+<!--    </test>-->
+</suite>
