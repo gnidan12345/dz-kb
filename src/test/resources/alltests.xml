@@ -1,6 +1,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="All tests" >
-<!--    <listeners><listener class-name="listeners.PersonTestListener"></listener></listeners>-->
+
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
 
 
     <test name="Tests smoke">

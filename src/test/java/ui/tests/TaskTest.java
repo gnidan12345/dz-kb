@@ -6,15 +6,20 @@ import api.steps.ProjectPermissionApiSteps;
 import api.steps.TaskApiSteps;
 import api.steps.UserApiSteps;
 import com.github.javafaker.Faker;
+import io.qameta.allure.Allure;
+import listeners.TestListener;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import ui.steps.BoardPage;
 import ui.steps.LoginPage;
 import ui.steps.TaskPage;
 
-import static io.netty.handler.codec.socksx.v5.Socks5AuthMethod.PASSWORD;
 
 public class TaskTest extends BaseTest {
 
@@ -42,6 +47,7 @@ public class TaskTest extends BaseTest {
     private boolean hasPermission;
 
 
+
     @BeforeTest
     public void prepareDataForTest() {
         userId = Integer.valueOf(userApiSteps.createUser(USERNAME, PASSWORD));
@@ -59,6 +65,7 @@ public class TaskTest extends BaseTest {
 
     @Test
     public void createTask() {
+
 
         new LoginPage()
                 .openLoginPage()
