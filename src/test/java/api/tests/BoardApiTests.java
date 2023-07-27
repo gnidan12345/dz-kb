@@ -8,10 +8,12 @@ import api.steps.BoardApiSteps;
 
 import java.util.List;
 public class BoardApiTests {
+
+    private Integer projectid= 240;
     @Test
     public void checkBoardApi() {
         BoardApiSteps boardApiSteps = new BoardApiSteps();
-        Result<List<BoardInfo>> boardInfoResult = boardApiSteps.getBoardForProject(122);
+        Result<List<BoardInfo>> boardInfoResult = boardApiSteps.getBoardForProject(projectid);
         Assert.assertTrue(boardInfoResult.getResult().size() > 0, "Board request doesn't contain records");
         System.out.println(boardInfoResult.getResult().get(0).getName());
     }

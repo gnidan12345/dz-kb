@@ -11,7 +11,7 @@ public class BoardPage extends BoardElements {
 
 
     public BoardPage createTask(Integer userid, Integer projectid) {
-        open("http://localhost/board/" + projectid);
+        open( "/board/" + projectid);
         taskBacklog().click();
         taskTitle().sendKeys("task444");
         submitTaskButton().click();

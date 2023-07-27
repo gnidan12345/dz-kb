@@ -1,8 +1,6 @@
 package api.steps;
 
-import api.models.BoardInfo;
-import api.models.UserInfo;
-import io.restassured.common.mapper.TypeRef;
+import api.models.args.users.UserDetails;
 import io.restassured.response.Response;
 import api.models.Result;
 import api.models.args.BodyArgs;
@@ -12,7 +10,6 @@ import api.models.args.users.UserId;
 import java.util.List;
 
 import static api.enums.UserRoles.ADMIN;
-import static api.enums.UserRoles.USER;
 import static api.methods.Users.*;
 import static utils.EnvProperties.API_TOKEN;
 import static utils.EnvProperties.API_USERNAME;

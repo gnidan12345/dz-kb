@@ -3,14 +3,14 @@ package api.steps;
 import api.models.Result;
 import api.models.args.BodyArgs;
 import api.models.args.projects.CreateProject;
+import api.models.args.projects.ProjectDetails;
 import api.models.args.projects.ProjectId;
-import api.models.args.users.UserId;
-import com.github.javafaker.Faker;
 import io.restassured.response.Response;
+
+import java.util.List;
 
 import static api.methods.Projects.CREATE_PROJECT;
 import static api.methods.Projects.REMOVE_PROJECT;
-import static api.methods.Users.DELETE_USER;
 import static utils.EnvProperties.API_TOKEN;
 import static utils.EnvProperties.API_USERNAME;
 
@@ -34,7 +34,7 @@ public class ProjectApiSteps extends BaseApiSteps {
         Result result = response.as(Result.class);
         response.prettyPrint();
 
-
+        response.then().statusCode(200);
         return result.getResult().toString();
 
     }
@@ -46,7 +46,12 @@ public class ProjectApiSteps extends BaseApiSteps {
                 .build();
 
         Response response = postRequest(API_USERNAME, API_TOKEN, bodyArgs);
+        response.prettyPrint();
+        response.then().statusCode(200);
         return (boolean) response.as(Result.class).getResult();
+
+
+
 
     }
 

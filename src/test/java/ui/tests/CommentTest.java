@@ -45,6 +45,9 @@ public class CommentTest extends BaseTest {
 
         System.out.println(projectPermissionApiSteps.createProjectPermission(projectId, userId, role));
 
+        taskId = Integer.valueOf(taskApiSteps.createTask("newTask", projectId));
+        System.out.println(taskId);
+
     }
 
 
@@ -52,9 +55,6 @@ public class CommentTest extends BaseTest {
 
     @Test
     public void createNewComment() {
-
-        taskId = Integer.valueOf(taskApiSteps.createTask("newTask", projectId));
-        System.out.println(taskId);
 
         new LoginPage()
                 .openLoginPage()

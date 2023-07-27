@@ -12,13 +12,10 @@ public class BaseTest {
     @BeforeMethod(alwaysRun = true)
     public void setUp() {
         Configuration.baseUrl = BASE_URL;
-    }
 
-    @BeforeMethod
-    public void setUpHeadless(){
-        Configuration.headless = true;
-    }
+        Configuration.headless = false;
 
+    }
     @AfterMethod(alwaysRun = true)
     public void cleanup() {
         closeWebDriver();

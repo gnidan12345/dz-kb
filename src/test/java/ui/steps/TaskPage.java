@@ -11,7 +11,7 @@ public class TaskPage extends TaskElements {
 
 
     public TaskPage deleteTask(Integer taskid) {
-        open("http://localhost/task/" + taskid);
+        open("/task/" + taskid);
         closeTaskLink().click();
         buttonCloseTaskConfirm().click();
         alertTaskIsClosed().shouldBe(Condition.disappear);
@@ -22,7 +22,7 @@ public class TaskPage extends TaskElements {
     public TaskPage createComment(Integer taskid, String content) {
 
 
-        open("http://localhost/task/" + taskid);
+        open("/task/" + taskid);
         addCommentLink().click();
         textareaComment().sendKeys(content);
         buttonSaveComment().click();

@@ -19,11 +19,4 @@
     </test>
 
 
-<!--    <test name="Woman Parameters  smoke">-->
-<!--        <classes>-->
-<!--            <class name="perosntest.WomanTests"/>-->
-<!--        </classes>-->
-
-
-<!--    </test>-->
 </suite>

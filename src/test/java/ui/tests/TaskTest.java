@@ -12,10 +12,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import ui.steps.BoardPage;
 import ui.steps.LoginPage;
 import ui.steps.TaskPage;
@@ -52,14 +49,7 @@ public class TaskTest extends BaseTest {
     public void prepareDataForTest() {
         userId = Integer.valueOf(userApiSteps.createUser(USERNAME, PASSWORD));
 
-        System.out.println(userId);
-
         projectId = Integer.valueOf(projectApiSteps.createProject(projectName));
-
-        System.out.println(projectId);
-
-        System.out.println(projectPermissionApiSteps.createProjectPermission(projectId, userId, role));
-
 
     }
 
@@ -71,7 +61,6 @@ public class TaskTest extends BaseTest {
                 .openLoginPage()
                 .loginByUser(USERNAME, PASSWORD)
                 .assertMainSectionIsOpened();
-
 
         BoardPage boardPage = new BoardPage();
 
@@ -91,13 +80,21 @@ public class TaskTest extends BaseTest {
                 .assertMainSectionIsOpened();
 
         taskId = Integer.valueOf(taskApiSteps.createTask("newTask", projectId));
-        System.out.println(taskId);
 
 
         new TaskPage()
 
                 .deleteTask(taskId);
 
+    }
+
+
+    @AfterMethod
+    public void deleteDataAfterTest(){
+        userApiSteps.deleteUser(userId);
+        projectApiSteps.deleteProject(projectId);
+        System.out.println(userId);
+        System.out.println(projectId);
     }
 
 
