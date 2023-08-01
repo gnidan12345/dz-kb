@@ -1,0 +1,717 @@
+This is trace
+This is debug
+[Log4j] The test with name createComment was started
+Using Log4J2 as the default logging framework
+-Dio.netty.leakDetection.level: simple
+-Dio.netty.leakDetection.targetRecords: 4
+Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@e944541
+-Dio.netty.noUnsafe: false
+Java version: 20
+sun.misc.Unsafe.theUnsafe: available
+sun.misc.Unsafe.copyMemory: available
+sun.misc.Unsafe.storeFence: available
+java.nio.Buffer.address: available
+direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:288) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:282) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) ~[selenium-remote-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.SelenideNettyClientFactory.createClient(SelenideNettyClientFactory.java:30) ~[selenide-core-6.15.0.jar:6.15.0]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:116) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:88) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:40) ~[selenium-chromium-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:111) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:101) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.ChromeDriverFactory.create(ChromeDriverFactory.java:42) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:123) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:67) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:76) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:113) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:52) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:202) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:186) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:155) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:130) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.StaticDriver.getAndCheckWebDriver(StaticDriver.java:65) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:220) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:72) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:105) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:104) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:70) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:101) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.Selenide.open(Selenide.java:53) ~[selenide-6.15.0.jar:6.15.0]
+	at ui.steps.LoginPage.openLoginPage(LoginPage.java:12) ~[test-classes/:?]
+	at ui.tests.TaskTest.createTask(TaskTest.java:73) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:829) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestRunner.run(TestRunner.java:602) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1099) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.run(TestNG.java:1067) [testng-7.7.1.jar:7.7.1]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+java.nio.Bits.unaligned: available, true
+jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @6b4a4e18
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:394) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:410) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:401) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) ~[selenium-remote-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.SelenideNettyClientFactory.createClient(SelenideNettyClientFactory.java:30) ~[selenide-core-6.15.0.jar:6.15.0]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:116) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:88) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:40) ~[selenium-chromium-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:111) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:101) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.ChromeDriverFactory.create(ChromeDriverFactory.java:42) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:123) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:67) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:76) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:113) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:52) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:202) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:186) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:155) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:130) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.StaticDriver.getAndCheckWebDriver(StaticDriver.java:65) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:220) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:72) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:105) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:104) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:70) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:101) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.Selenide.open(Selenide.java:53) ~[selenide-6.15.0.jar:6.15.0]
+	at ui.steps.LoginPage.openLoginPage(LoginPage.java:12) ~[test-classes/:?]
+	at ui.tests.TaskTest.createTask(TaskTest.java:73) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:829) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestRunner.run(TestRunner.java:602) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1099) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.run(TestNG.java:1067) [testng-7.7.1.jar:7.7.1]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+java.nio.DirectByteBuffer.<init>(long, int): unavailable
+sun.misc.Unsafe: available
+maxDirectMemory: 4261412864 bytes (maybe)
+-Dio.netty.tmpdir: C:\Users\Julia\AppData\Local\Temp (java.io.tmpdir)
+-Dio.netty.bitMode: 64 (sun.arch.data.model)
+Platform: Windows
+-Dio.netty.maxDirectMemory: -1 bytes
+-Dio.netty.uninitializedArrayAllocationThreshold: -1
+java.nio.ByteBuffer.cleaner(): available
+-Dio.netty.noPreferDirect: false
+org.jctools-core.MpscChunkedArrayQueue: available
+-Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+-Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+-Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+-Dio.netty.eventLoopThreads: 16
+-Dio.netty.noKeySetOptimization: false
+-Dio.netty.selectorAutoRebuildThreshold: 512
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@47d1798c
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@102e9731
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@f5a1b27
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@52421f92
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@1916d0eb
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7de54be7
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@22b9f45f
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@60c5c115
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4f7bc46e
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@18161415
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@75e00044
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@3be3ba84
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2aaa5122
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2b45ede
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@77a38cec
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@51b22f06
+-Dio.netty.allocator.numHeapArenas: 16
+-Dio.netty.allocator.numDirectArenas: 16
+-Dio.netty.allocator.pageSize: 8192
+-Dio.netty.allocator.maxOrder: 9
+-Dio.netty.allocator.chunkSize: 4194304
+-Dio.netty.allocator.smallCacheSize: 256
+-Dio.netty.allocator.normalCacheSize: 64
+-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+-Dio.netty.allocator.cacheTrimInterval: 8192
+-Dio.netty.allocator.cacheTrimIntervalMillis: 0
+-Dio.netty.allocator.useCacheForAllThreads: false
+-Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+-Dio.netty.allocator.type: pooled
+-Dio.netty.threadLocalDirectBufferSize: 0
+-Dio.netty.maxThreadLocalCharBufferSize: 16384
+-Dio.netty.processId: 10808 (auto-detected)
+-Djava.net.preferIPv4Stack: false
+-Djava.net.preferIPv6Addresses: false
+Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+-Dio.netty.machineId: f8:5e:a0:ff:fe:dd:40:9b (auto-detected)
+-Dio.netty.buffer.checkAccessible: true
+-Dio.netty.buffer.checkBounds: true
+Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2770c5c9
+-Dio.netty.recycler.maxCapacityPerThread: 4096
+-Dio.netty.recycler.ratio: 8
+-Dio.netty.recycler.chunkSize: 32
+-Dio.netty.recycler.blocking: false
+-Dio.netty.recycler.batchFastThreadLocalOnly: true
+brotli4j not in the classpath; Brotli support will be unavailable.
+-Dio.netty.initialSeedUniquifier: 0x459110b9a2d4fbad
+Encoding WebSocket Frame opCode=8 length=26
+This is trace
+This is debug
+[Log4j] The test with name createComment was started
+Using Log4J2 as the default logging framework
+-Dio.netty.leakDetection.level: simple
+-Dio.netty.leakDetection.targetRecords: 4
+Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@525b999
+-Dio.netty.noUnsafe: false
+Java version: 20
+sun.misc.Unsafe.theUnsafe: available
+sun.misc.Unsafe.copyMemory: available
+sun.misc.Unsafe.storeFence: available
+java.nio.Buffer.address: available
+direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:288) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:282) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) ~[selenium-remote-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.SelenideNettyClientFactory.createClient(SelenideNettyClientFactory.java:30) ~[selenide-core-6.15.0.jar:6.15.0]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:116) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:88) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:40) ~[selenium-chromium-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:111) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:101) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.ChromeDriverFactory.create(ChromeDriverFactory.java:42) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:123) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:67) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:76) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:113) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:52) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:202) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:186) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:155) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:130) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.StaticDriver.getAndCheckWebDriver(StaticDriver.java:65) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:220) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:72) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:105) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:104) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:70) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:101) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.Selenide.open(Selenide.java:53) ~[selenide-6.15.0.jar:6.15.0]
+	at ui.steps.LoginPage.openLoginPage(LoginPage.java:12) ~[test-classes/:?]
+	at ui.tests.TaskTest.createTask(TaskTest.java:75) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:829) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestRunner.run(TestRunner.java:602) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1099) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.run(TestNG.java:1067) [testng-7.7.1.jar:7.7.1]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+java.nio.Bits.unaligned: available, true
+jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @6b4a4e18
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:394) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:410) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:319) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:401) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) ~[selenium-remote-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.SelenideNettyClientFactory.createClient(SelenideNettyClientFactory.java:30) ~[selenide-core-6.15.0.jar:6.15.0]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:116) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:88) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:40) ~[selenium-chromium-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:111) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:101) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.ChromeDriverFactory.create(ChromeDriverFactory.java:42) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:123) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:67) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:76) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:113) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:52) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:202) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:186) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:155) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:130) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.StaticDriver.getAndCheckWebDriver(StaticDriver.java:65) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:220) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:72) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:105) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:104) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:70) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:101) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.Selenide.open(Selenide.java:53) ~[selenide-6.15.0.jar:6.15.0]
+	at ui.steps.LoginPage.openLoginPage(LoginPage.java:12) ~[test-classes/:?]
+	at ui.tests.TaskTest.createTask(TaskTest.java:75) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:578) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:829) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestRunner.run(TestRunner.java:602) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1099) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.run(TestNG.java:1067) [testng-7.7.1.jar:7.7.1]
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66) [testng-rt.jar:?]
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105) [testng-rt.jar:?]
+java.nio.DirectByteBuffer.<init>(long, int): unavailable
+sun.misc.Unsafe: available
+maxDirectMemory: 4261412864 bytes (maybe)
+-Dio.netty.tmpdir: C:\Users\Julia\AppData\Local\Temp (java.io.tmpdir)
+-Dio.netty.bitMode: 64 (sun.arch.data.model)
+Platform: Windows
+-Dio.netty.maxDirectMemory: -1 bytes
+-Dio.netty.uninitializedArrayAllocationThreshold: -1
+java.nio.ByteBuffer.cleaner(): available
+-Dio.netty.noPreferDirect: false
+org.jctools-core.MpscChunkedArrayQueue: available
+-Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+-Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+-Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+-Dio.netty.eventLoopThreads: 16
+-Dio.netty.noKeySetOptimization: false
+-Dio.netty.selectorAutoRebuildThreshold: 512
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@29e94753
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@30ff3726
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2a0a654a
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@29beac4e
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@12f1b76c
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5b7ee413
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2227fa03
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7ea7fed5
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@61f26cba
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4d0042eb
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@50ea4eaa
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@11fa5334
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@639f6a0d
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2c476b8f
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2e5affb3
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@6d7a6abf
+-Dio.netty.allocator.numHeapArenas: 16
+-Dio.netty.allocator.numDirectArenas: 16
+-Dio.netty.allocator.pageSize: 8192
+-Dio.netty.allocator.maxOrder: 9
+-Dio.netty.allocator.chunkSize: 4194304
+-Dio.netty.allocator.smallCacheSize: 256
+-Dio.netty.allocator.normalCacheSize: 64
+-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+-Dio.netty.allocator.cacheTrimInterval: 8192
+-Dio.netty.allocator.cacheTrimIntervalMillis: 0
+-Dio.netty.allocator.useCacheForAllThreads: false
+-Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+-Dio.netty.allocator.type: pooled
+-Dio.netty.threadLocalDirectBufferSize: 0
+-Dio.netty.maxThreadLocalCharBufferSize: 16384
+-Dio.netty.processId: 14300 (auto-detected)
+-Djava.net.preferIPv4Stack: false
+-Djava.net.preferIPv6Addresses: false
+Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+-Dio.netty.machineId: f8:5e:a0:ff:fe:dd:40:9b (auto-detected)
+-Dio.netty.buffer.checkAccessible: true
+-Dio.netty.buffer.checkBounds: true
+Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@1f0a613f
+-Dio.netty.recycler.maxCapacityPerThread: 4096
+-Dio.netty.recycler.ratio: 8
+-Dio.netty.recycler.chunkSize: 32
+-Dio.netty.recycler.blocking: false
+-Dio.netty.recycler.batchFastThreadLocalOnly: true
+brotli4j not in the classpath; Brotli support will be unavailable.
+-Dio.netty.initialSeedUniquifier: 0x86cd0f7bac842772
+Encoding WebSocket Frame opCode=8 length=26
+Using Log4J2 as the default logging framework
+-Dio.netty.leakDetection.level: simple
+-Dio.netty.leakDetection.targetRecords: 4
+Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@17aadd1c
+-Dio.netty.noUnsafe: false
+Java version: 17
+sun.misc.Unsafe.theUnsafe: available
+sun.misc.Unsafe.copyMemory: available
+sun.misc.Unsafe.storeFence: available
+java.nio.Buffer.address: available
+direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:288) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:282) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) ~[selenium-remote-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.SelenideNettyClientFactory.createClient(SelenideNettyClientFactory.java:30) ~[selenide-core-6.15.0.jar:6.15.0]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:116) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:88) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:40) ~[selenium-chromium-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:111) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:101) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.ChromeDriverFactory.create(ChromeDriverFactory.java:42) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:123) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:67) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:76) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:113) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:52) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:202) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:186) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:155) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:130) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.StaticDriver.getAndCheckWebDriver(StaticDriver.java:65) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:220) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:72) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:105) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:104) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:70) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:101) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.Selenide.open(Selenide.java:53) ~[selenide-6.15.0.jar:6.15.0]
+	at ui.steps.LoginPage.openLoginPage(LoginPage.java:12) ~[test-classes/:?]
+	at ui.tests.LoginTests.loginByNewUser(LoginTests.java:36) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:829) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestRunner.run(TestRunner.java:602) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1099) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.run(TestNG.java:1067) [testng-7.7.1.jar:7.7.1]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324) [surefire-testng-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74) [surefire-testng-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123) [surefire-testng-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456) [surefire-booter-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) [surefire-booter-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) [surefire-booter-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) [surefire-booter-3.0.0-M7.jar:3.0.0-M7]
+java.nio.Bits.unaligned: available, true
+jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @6d1e7682
+	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392) ~[?:?]
+	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:560) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0$7.run(PlatformDependent0.java:410) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at java.security.AccessController.doPrivileged(AccessController.java:318) ~[?:?]
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:401) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:333) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:88) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:114) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:251) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:224) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at io.netty.util.HashedWheelTimer.<init>(HashedWheelTimer.java:203) ~[netty-common-4.1.91.Final.jar:4.1.91.Final]
+	at org.asynchttpclient.DefaultAsyncHttpClient.newNettyTimer(DefaultAsyncHttpClient.java:111) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.DefaultAsyncHttpClient.<init>(DefaultAsyncHttpClient.java:90) ~[async-http-client-2.12.3.jar:?]
+	at org.asynchttpclient.Dsl.asyncHttpClient(Dsl.java:32) ~[async-http-client-2.12.3.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.createHttpClient(NettyClient.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient.<clinit>(NettyClient.java:47) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.http.netty.NettyClient$Factory.createClient(NettyClient.java:135) ~[selenium-remote-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.SelenideNettyClientFactory.createClient(SelenideNettyClientFactory.java:30) ~[selenide-core-6.15.0.jar:6.15.0]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:116) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.HttpCommandExecutor.<init>(HttpCommandExecutor.java:94) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.<init>(DriverCommandExecutor.java:88) ~[selenium-remote-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chromium.ChromiumDriverCommandExecutor.<init>(ChromiumDriverCommandExecutor.java:40) ~[selenium-chromium-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver$ChromeDriverCommandExecutor.<init>(ChromeDriver.java:111) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.generateExecutor(ChromeDriver.java:101) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:88) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:84) ~[selenium-chrome-driver-4.9.1.jar:?]
+	at com.codeborne.selenide.webdriver.ChromeDriverFactory.create(ChromeDriverFactory.java:42) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriverInstance(WebDriverFactory.java:123) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.webdriver.WebDriverFactory.createWebDriver(WebDriverFactory.java:67) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.lambda$createDriver$0(CreateDriverCommand.java:76) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.get(SelenideLogger.java:113) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.CreateDriverCommand.createDriver(CreateDriverCommand.java:52) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createDriver(WebDriverThreadLocalContainer.java:202) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.createAndRegisterDriver(WebDriverThreadLocalContainer.java:186) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.WebDriverThreadLocalContainer.getAndCheckWebDriver(WebDriverThreadLocalContainer.java:155) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.WebDriverRunner.getAndCheckWebDriver(WebDriverRunner.java:130) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.impl.StaticDriver.getAndCheckWebDriver(StaticDriver.java:65) ~[selenide-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.getAndCheckWebDriver(SelenideDriver.java:220) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.lambda$navigateTo$0(Navigator.java:72) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.lambda$run$0(SelenideLogger.java:105) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.wrap(SelenideLogger.java:133) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.logevents.SelenideLogger.run(SelenideLogger.java:104) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.navigateTo(Navigator.java:70) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.drivercommands.Navigator.open(Navigator.java:32) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.SelenideDriver.open(SelenideDriver.java:101) ~[selenide-core-6.15.0.jar:6.15.0]
+	at com.codeborne.selenide.Selenide.open(Selenide.java:53) ~[selenide-6.15.0.jar:6.15.0]
+	at ui.steps.LoginPage.openLoginPage(LoginPage.java:12) ~[test-classes/:?]
+	at ui.tests.LoginTests.loginByNewUser(LoginTests.java:36) ~[test-classes/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.7.1.jar:7.7.1]
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.7.1.jar:7.7.1]
+	at java.util.ArrayList.forEach(ArrayList.java:1511) [?:?]
+	at org.testng.TestRunner.privateRun(TestRunner.java:829) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestRunner.run(TestRunner.java:602) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.7.1.jar:7.7.1]
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.runSuites(TestNG.java:1099) [testng-7.7.1.jar:7.7.1]
+	at org.testng.TestNG.run(TestNG.java:1067) [testng-7.7.1.jar:7.7.1]
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324) [surefire-testng-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74) [surefire-testng-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123) [surefire-testng-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456) [surefire-booter-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169) [surefire-booter-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595) [surefire-booter-3.0.0-M7.jar:3.0.0-M7]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581) [surefire-booter-3.0.0-M7.jar:3.0.0-M7]
+java.nio.DirectByteBuffer.<init>(long, int): unavailable
+sun.misc.Unsafe: available
+maxDirectMemory: 4261412864 bytes (maybe)
+-Dio.netty.tmpdir: C:\Users\Julia\AppData\Local\Temp (java.io.tmpdir)
+-Dio.netty.bitMode: 64 (sun.arch.data.model)
+Platform: Windows
+-Dio.netty.maxDirectMemory: -1 bytes
+-Dio.netty.uninitializedArrayAllocationThreshold: -1
+java.nio.ByteBuffer.cleaner(): available
+-Dio.netty.noPreferDirect: false
+org.jctools-core.MpscChunkedArrayQueue: available
+-Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+-Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+-Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+-Dio.netty.eventLoopThreads: 16
+-Dio.netty.noKeySetOptimization: false
+-Dio.netty.selectorAutoRebuildThreshold: 512
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@58c4d427
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@43296744
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2f6d684d
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5877a9e7
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@2d0584c0
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@259ec563
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@61f5ee9d
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@4284bd5
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@58afc14
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@56ec941b
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@18a3095d
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@5e139f7f
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@c2bb2f5
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@3ed5a327
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@3e3cac41
+instrumented a special java.util.Set into: sun.nio.ch.WEPollSelectorImpl@7c96249e
+-Dio.netty.allocator.numHeapArenas: 16
+-Dio.netty.allocator.numDirectArenas: 16
+-Dio.netty.allocator.pageSize: 8192
+-Dio.netty.allocator.maxOrder: 9
+-Dio.netty.allocator.chunkSize: 4194304
+-Dio.netty.allocator.smallCacheSize: 256
+-Dio.netty.allocator.normalCacheSize: 64
+-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+-Dio.netty.allocator.cacheTrimInterval: 8192
+-Dio.netty.allocator.cacheTrimIntervalMillis: 0
+-Dio.netty.allocator.useCacheForAllThreads: false
+-Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+-Dio.netty.allocator.type: pooled
+-Dio.netty.threadLocalDirectBufferSize: 0
+-Dio.netty.maxThreadLocalCharBufferSize: 16384
+-Dio.netty.processId: 23792 (auto-detected)
+-Djava.net.preferIPv4Stack: false
+-Djava.net.preferIPv6Addresses: false
+Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+-Dio.netty.machineId: f8:5e:a0:ff:fe:dd:40:9b (auto-detected)
+-Dio.netty.buffer.checkAccessible: true
+-Dio.netty.buffer.checkBounds: true
+Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@336adf1b
+-Dio.netty.recycler.maxCapacityPerThread: 4096
+-Dio.netty.recycler.ratio: 8
+-Dio.netty.recycler.chunkSize: 32
+-Dio.netty.recycler.blocking: false
+-Dio.netty.recycler.batchFastThreadLocalOnly: true
+brotli4j not in the classpath; Brotli support will be unavailable.
+-Dio.netty.initialSeedUniquifier: 0xff87b516e3cb343a
+Encoding WebSocket Frame opCode=8 length=26
+Encoding WebSocket Frame opCode=8 length=26
+Encoding WebSocket Frame opCode=8 length=26
+Encoding WebSocket Frame opCode=8 length=26
+Encoding WebSocket Frame opCode=8 length=26
+Encoding WebSocket Frame opCode=8 length=26
+[Log4j] The test with name createComment was started
+Encoding WebSocket Frame opCode=8 length=26
