@@ -47,7 +47,11 @@ public class UserApiTests {
 
     @Test
     public void getUser() {
+        Faker faker = new Faker();
+        String USERNAME = faker.name().username();
+        String PASSWORD = "myTestPassword";
         UserApiSteps userApiSteps = new UserApiSteps();
+        int userid = Integer.valueOf(userApiSteps.createUser(USERNAME, PASSWORD));
         userApiSteps.getUser(userId);
 
     }
