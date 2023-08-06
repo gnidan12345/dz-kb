@@ -1,0 +1,1 @@
+{"uuid":"af9797db-af35-4a4d-b2b4-175ccf762805","name":"KBProject1","children":["58002692-5e80-45ab-ba7c-4cca1e093d2c"],"befores":[{"name":"prepareDataForTest","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1690036436281,"stop":1690036437985}],"afters":[],"start":1690036436265,"stop":1690036440770}
