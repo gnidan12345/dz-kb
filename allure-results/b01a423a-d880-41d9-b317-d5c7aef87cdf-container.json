@@ -1,0 +1,1 @@
+{"uuid":"b01a423a-d880-41d9-b317-d5c7aef87cdf","name":"ui.tests.BaseTest.cleanup","children":["ee65d2f1-c3bf-4a2a-b133-673773cae10d"],"description":"","befores":[],"afters":[{"name":"cleanup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1690057726681,"stop":1690057726681}],"start":1690057726681,"stop":1690057726681}
